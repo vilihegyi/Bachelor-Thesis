@@ -1,0 +1,61 @@
+{
+    "_version": "1.1.0",
+    "sap.app": {
+      "_version": "1.1.0",
+      "id": "EVotingSystem",
+      "type": "application",
+      "title": "E-Voting System",
+      "applicationVersion": {
+        "version": "1.0.0"
+      }
+    },
+    "sap.ui": {
+      "_version": "1.1.0",
+      "technology": "UI5",
+      "deviceTypes": {
+        "desktop": true,
+        "tablet": true,
+        "phone": true
+      },
+      "supportedThemes": [
+        "sap_hcb",
+        "sap_bluecrystal",
+        "sap_belize"
+      ]
+    },
+    "sap.ui5": {
+      "_version": "1.1.0",
+      "rootView": "EVotingSystem.view.App",
+      "dependencies": {
+        "minUI5Version": "1.30",
+        "libs": {
+          "sap.ui.core": {},
+          "sap.m": {},
+          "sap.tnt": {},
+          "sap.ui.layout": {}
+        }
+      },
+      "routing": {
+        "config": {
+          "routerClass": "sap.m.routing.Router",
+          "controlId": "appMainContents",
+          "viewType": "XML",
+          "controlAggregation": "pages",
+          "viewPath": "EVotingSystem.view",
+          "async": true
+        },
+        "routes": [
+          {
+              "pattern": "",
+              "name": "details",
+              "target": "details"
+          }
+        ],
+        "targets": {
+          "details": {
+              "viewName": "Details"
+          }
+        }
+      }
+    }
+  }

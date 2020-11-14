@@ -1,0 +1,35 @@
+<mvc:View
+    height="100%"
+    controllerName="EVotingSystem.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:tnt="sap.tnt">
+    <Page
+        showHeader="false"
+        enableScrolling="false">
+        <tnt:ToolHeader>
+            <Title
+                text="E-Voting System based on the Blockchain technology"
+                tooltip="E-Voting System based on the Blockchain technology">
+                <layoutData>
+                        <ToolbarLayoutData shrinkable="true" minWidth="0px"/>
+                </layoutData>
+            </Title>
+        </tnt:ToolHeader>
+        <l:VerticalLayout
+            id="vPrintPage"
+            width="100%">
+            <l:content>
+            </l:content>
+        </l:VerticalLayout>
+        <l:FixFlex>
+            <l:flexContent>
+                <App
+                    id="appMainContents"/>
+            </l:flexContent>
+        </l:FixFlex>
+    </Page>
+</mvc:View>

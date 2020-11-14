@@ -1,0 +1,86 @@
+<mvc:View
+    controllerName="EVotingSystem.controller.Details"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:u="sap.ui.unified"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:t="sap.ui.table">
+    <Page
+        showHeader="false">
+        <l:VerticalLayout
+            id="vDetailsPage"
+            width="100%">
+            <l:content>
+                <Panel id="plFileBrowse">
+                    <content>
+                        <l:VerticalLayout>
+                            <l:content>
+                                <Label
+                                    class="sapUiSmallMarginTop sapUiTinyMarginEnd black"
+                                    design="Bold"
+                                    text="CNP: "
+                                    labelFor="iCNP"/>
+                                <Input
+                                    id="iCNP"
+                                    class="sapUiTinyMarginEnd"
+                                    placeholder="Your CNP"
+                                    tooltip="Please insert your CNP in this input"/>
+                                <Label
+                                    class="sapUiSmallMarginTop sapUiTinyMarginEnd black"
+                                    design="Bold"
+                                    text="Name: "
+                                    labelFor="iName"/>
+                                <Input
+                                    id="iName"
+                                    class="sapUiTinyMarginEnd"
+                                    placeholder="Your Name"
+                                    tooltip="Please insert your Full Name in this input"/>
+                                <Label
+                                    class="sapUiSmallMarginTop sapUiTinyMarginEnd black"
+                                    design="Bold"
+                                    text="Address: "
+                                    labelFor="iAddress"/>
+                                <Input
+                                    id="iAddress"
+                                    class="sapUiTinyMarginEnd"
+                                    placeholder="Your home address"
+                                    tooltip="Please insert your home adress in this input"/>
+                                <Label
+                                    class="sapUiSmallMarginTop sapUiTinyMarginEnd black"
+                                    design="Bold"
+                                    text="E-mail address: "
+                                    labelFor="iEAddress"/>
+                                <Input
+                                    id="iEAddress"
+                                    class="sapUiTinyMarginEnd"
+                                    placeholder="Your e-mail address"
+                                    tooltip="Please insert your email address in this input"/>
+                                <Label
+                                    class="sapUiSmallMarginTop sapUiTinyMarginEnd black"
+                                    design="Bold"
+                                    text="Vote: "
+                                    labelFor="rbVoteGroup"/>
+                                <RadioButtonGroup 
+                                    id="rbVoteGroup"
+                                    columns="2"
+                                    select="rbModeSelect"
+                                    class="sapUiTinyMarginBegin">
+                                    <buttons>
+                                    <RadioButton text="Option 1" tooltip="Option 1" class="sapUiSmallMarginEnd"/>
+                                    <RadioButton text="Option 2" tooltip="Option 2"/>
+                                    </buttons>
+                                </RadioButtonGroup>
+                                <Button
+                                    id="bSendVote"
+                                    text="Send my vote"
+                                    press="bSendVotePress"
+                                    tooltip="Press this button to send youre vote"/>
+                            </l:content>
+                        </l:VerticalLayout>
+                    </content>
+                </Panel>
+            </l:content>
+        </l:VerticalLayout>
+    </Page>
+</mvc:View>
